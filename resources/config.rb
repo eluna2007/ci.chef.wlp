@@ -43,7 +43,6 @@ end
 =end
 actions :create, :create_if_missing
 
-# attribute :file, :kind_of => String, :name_attribute => true
 #<> @attribute file The server.xml file to create or update.
 attribute :file, :kind_of => String, :name_attribute => true
 
