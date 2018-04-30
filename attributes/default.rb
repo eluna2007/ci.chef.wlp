@@ -76,7 +76,7 @@ default[:wlp][:archive][:extras][:base_dir] = "#{node[:wlp][:base_dir]}/extras"
 #  Accept license terms when doing archive-based installation.
 #  Must be set to `true` or the installation fails.
 #>
-default[:wlp][:archive][:accept_license] = false
+default[:wlp][:archive][:accept_license] = true
 
 #<
 #  URL location for a zip file containing Liberty profile installation files.

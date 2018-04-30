@@ -85,7 +85,7 @@ if node[:wlp][:archive][:extras][:install]
   else
     extras_file = "#{Chef::Config[:file_cache_path]}/#{extras_filename}"
     remote_file extras_file do
-      source node[:wlp][:archive][:extras][:url]
+      source "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/8.5.5.9/wlp-developers-extras-8.5.5.9.jar"
       user node[:wlp][:user]
       group node[:wlp][:group]
       not_if { ::File.exists?(extras_dir) }

@@ -35,7 +35,7 @@ actions :install
 
 
 #<> @attribute name Specifies the name of the asset to be installed.
-attribute :name, :kind_of => String, :default => nil
+attribute :name, :kind_of => String, :default => "wlp-runtime-8.5.5.9.jar"
 
 #<> @attribute to Specifies where to install the feature. The feature can be installed to any configured product extension location, or as a user feature.
 attribute :to, :kind_of => String, :default => "usr"

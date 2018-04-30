@@ -36,10 +36,10 @@ actions :download
 
 
 #<> @attribute name Specifies the name of the asset to be downloaded.
-attribute :name, :kind_of => String, :default => nil
+attribute :name, :kind_of => String, :default => "wlp-runtime-8.5.5.9.jar"
 
 #<> @attribute directory Specifies which local directory path utilities are downloaded to when using the :download action.
-attribute :directory, :kind_of => String, :default => nil
+attribute :directory, :kind_of => String, :default => "/tmp"
 
 #<> @attribute accept_license Specifies whether to accept the license terms and conditions of the feature.
 attribute :accept_license, :kind_of => [TrueClass, FalseClass], :default => false

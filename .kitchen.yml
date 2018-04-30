@@ -1,23 +1,24 @@
-#
-# See https://github.com/WASdev/ci.chef.wlp/wiki/How-to-run-%27test-kitchen%27-tests for information
-# on how to configure and run the test-kitchen tests.
-#
 ---
-driver_plugin: vagrant
+driver:
+  name: vagrant
 
+provisioner:
+  name: chef_zero
+verifier:
+  name: inspec
 platforms:
-- name: ubuntu-14.04-i386
-- name: centos-6.4
+  #- name: ubuntu-14.04
+  - name: centos-7.2
 
 suites:
 - name: basic
   run_list: 
-  - recipe[minitest-handler]
+  #- recipe[minitest-handler]
   - recipe[wlp_test::basic]
 
 - name: custom
   run_list: 
-  - recipe[minitest-handler]
+  #- recipe[minitest-handler]
   - recipe[wlp_test::custom]
   attributes:
     wlp:
@@ -32,8 +33,13 @@ suites:
 
 - name: app
   run_list: 
-  - recipe[minitest-handler]
+  #- recipe[minitest-handler]
   - recipe[wlp_test::app]
   attributes:
     wlp:
       user_dir: /var/liberty
+
+  verifier:
+    inspec_tests:
+        - test/integration/default
+  attributes:
