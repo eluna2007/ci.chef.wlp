@@ -1,0 +1,27 @@
+DEPENDENCIES
+  apt
+  minitest-handler
+  test_helper
+    path: test/cookbooks/test_helper
+  wlp
+    path: .
+    metadata: true
+  wlp_test
+    path: test/cookbooks/wlp_test
+
+GRAPH
+  apt (7.0.0)
+  chef_handler (3.0.3)
+  homebrew (5.0.4)
+  java (1.50.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  minitest-handler (1.5.0)
+    chef_handler (>= 0.0.0)
+  test_helper (0.0.0)
+  windows (4.2.1)
+  wlp (0.3.1)
+    java (>= 1.16.4)
+  wlp_test (0.0.0)
+    wlp (>= 0.0.0)
